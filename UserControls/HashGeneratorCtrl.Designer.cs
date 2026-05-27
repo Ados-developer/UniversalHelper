@@ -39,9 +39,9 @@
             // label4
             // 
             label4.Font = new Font("Snap ITC", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(609, 94);
+            label4.Location = new Point(600, 85);
             label4.Name = "label4";
-            label4.Size = new Size(511, 36);
+            label4.Size = new Size(500, 40);
             label4.TabIndex = 10;
             label4.Text = "Output";
             label4.TextAlign = ContentAlignment.MiddleCenter;
@@ -49,9 +49,9 @@
             // label3
             // 
             label3.Font = new Font("Snap ITC", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(40, 94);
+            label3.Location = new Point(50, 85);
             label3.Name = "label3";
-            label3.Size = new Size(533, 36);
+            label3.Size = new Size(500, 40);
             label3.TabIndex = 9;
             label3.Text = "Input";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -59,20 +59,20 @@
             // tbOutput
             // 
             tbOutput.BorderStyle = BorderStyle.FixedSingle;
-            tbOutput.Location = new Point(609, 142);
+            tbOutput.Location = new Point(600, 150);
             tbOutput.Multiline = true;
             tbOutput.Name = "tbOutput";
             tbOutput.ReadOnly = true;
-            tbOutput.Size = new Size(511, 359);
+            tbOutput.Size = new Size(500, 350);
             tbOutput.TabIndex = 8;
             // 
             // tbInput
             // 
             tbInput.BorderStyle = BorderStyle.FixedSingle;
-            tbInput.Location = new Point(40, 142);
+            tbInput.Location = new Point(50, 150);
             tbInput.Multiline = true;
             tbInput.Name = "tbInput";
-            tbInput.Size = new Size(533, 359);
+            tbInput.Size = new Size(500, 350);
             tbInput.TabIndex = 7;
             tbInput.TextChanged += tbInput_TextChanged;
             // 
@@ -81,9 +81,9 @@
             label1.BackColor = SystemColors.ScrollBar;
             label1.Font = new Font("Snap ITC", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.HotTrack;
-            label1.Location = new Point(369, 36);
+            label1.Location = new Point(400, 20);
             label1.Name = "label1";
-            label1.Size = new Size(420, 42);
+            label1.Size = new Size(350, 50);
             label1.TabIndex = 6;
             label1.Text = "Hash Generator";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -92,9 +92,9 @@
             // 
             btnCopy.BackColor = SystemColors.ActiveCaption;
             btnCopy.Font = new Font("Snap ITC", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnCopy.Location = new Point(486, 525);
+            btnCopy.Location = new Point(475, 525);
             btnCopy.Name = "btnCopy";
-            btnCopy.Size = new Size(201, 31);
+            btnCopy.Size = new Size(200, 40);
             btnCopy.TabIndex = 11;
             btnCopy.Text = "Copy to clipboard";
             btnCopy.UseVisualStyleBackColor = false;

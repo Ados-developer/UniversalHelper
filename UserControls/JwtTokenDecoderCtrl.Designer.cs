@@ -44,9 +44,9 @@
             label1.BackColor = SystemColors.ScrollBar;
             label1.Font = new Font("Snap ITC", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.HotTrack;
-            label1.Location = new Point(376, 20);
+            label1.Location = new Point(400, 20);
             label1.Name = "label1";
-            label1.Size = new Size(420, 44);
+            label1.Size = new Size(350, 50);
             label1.TabIndex = 6;
             label1.Text = "JwtToken Decoder";
             label1.TextAlign = ContentAlignment.MiddleCenter;
@@ -54,9 +54,9 @@
             // label4
             // 
             label4.Font = new Font("Snap ITC", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(332, 185);
+            label4.Location = new Point(475, 175);
             label4.Name = "label4";
-            label4.Size = new Size(511, 38);
+            label4.Size = new Size(200, 30);
             label4.TabIndex = 10;
             label4.Text = "Output Header";
             label4.TextAlign = ContentAlignment.MiddleCenter;
@@ -64,9 +64,9 @@
             // label3
             // 
             label3.Font = new Font("Snap ITC", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(310, 94);
+            label3.Location = new Point(475, 100);
             label3.Name = "label3";
-            label3.Size = new Size(533, 38);
+            label3.Size = new Size(200, 30);
             label3.TabIndex = 9;
             label3.Text = "Input";
             label3.TextAlign = ContentAlignment.MiddleCenter;
@@ -74,27 +74,27 @@
             // tbOutputHeader
             // 
             tbOutputHeader.BorderStyle = BorderStyle.FixedSingle;
-            tbOutputHeader.Location = new Point(40, 226);
+            tbOutputHeader.Location = new Point(75, 215);
             tbOutputHeader.Name = "tbOutputHeader";
             tbOutputHeader.ReadOnly = true;
-            tbOutputHeader.Size = new Size(1081, 23);
+            tbOutputHeader.Size = new Size(1000, 23);
             tbOutputHeader.TabIndex = 8;
             // 
             // tbInput
             // 
             tbInput.BorderStyle = BorderStyle.FixedSingle;
-            tbInput.Location = new Point(40, 135);
+            tbInput.Location = new Point(75, 140);
             tbInput.Name = "tbInput";
-            tbInput.Size = new Size(1081, 23);
+            tbInput.Size = new Size(1000, 23);
             tbInput.TabIndex = 7;
             tbInput.TextChanged += tbInput_TextChanged;
             // 
             // label2
             // 
             label2.Font = new Font("Snap ITC", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(332, 252);
+            label2.Location = new Point(475, 250);
             label2.Name = "label2";
-            label2.Size = new Size(511, 38);
+            label2.Size = new Size(200, 30);
             label2.TabIndex = 11;
             label2.Text = "Output Payload";
             label2.TextAlign = ContentAlignment.MiddleCenter;
@@ -102,9 +102,9 @@
             // label5
             // 
             label5.Font = new Font("Snap ITC", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(332, 315);
+            label5.Location = new Point(475, 325);
             label5.Name = "label5";
-            label5.Size = new Size(511, 38);
+            label5.Size = new Size(200, 30);
             label5.TabIndex = 12;
             label5.Text = "Output Signature";
             label5.TextAlign = ContentAlignment.MiddleCenter;
@@ -112,19 +112,19 @@
             // tbOutputPayload
             // 
             tbOutputPayload.BorderStyle = BorderStyle.FixedSingle;
-            tbOutputPayload.Location = new Point(35, 289);
+            tbOutputPayload.Location = new Point(75, 290);
             tbOutputPayload.Name = "tbOutputPayload";
             tbOutputPayload.ReadOnly = true;
-            tbOutputPayload.Size = new Size(1081, 23);
+            tbOutputPayload.Size = new Size(1000, 23);
             tbOutputPayload.TabIndex = 13;
             // 
             // tbOutputSignature
             // 
             tbOutputSignature.BorderStyle = BorderStyle.FixedSingle;
-            tbOutputSignature.Location = new Point(35, 347);
+            tbOutputSignature.Location = new Point(75, 365);
             tbOutputSignature.Name = "tbOutputSignature";
             tbOutputSignature.ReadOnly = true;
-            tbOutputSignature.Size = new Size(1081, 23);
+            tbOutputSignature.Size = new Size(1000, 23);
             tbOutputSignature.TabIndex = 14;
             // 
             // JwtTokenDecoderCtrl
