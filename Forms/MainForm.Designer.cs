@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             panelUserControl = new Panel();
             label1 = new Label();
             btnBase64 = new Button();
@@ -116,6 +117,7 @@
             Controls.Add(btnBase64);
             Controls.Add(label1);
             Controls.Add(panelUserControl);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximumSize = new Size(1200, 850);
             MinimumSize = new Size(1200, 850);
             Name = "MainForm";
