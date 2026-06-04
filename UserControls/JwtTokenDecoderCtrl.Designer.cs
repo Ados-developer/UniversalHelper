@@ -41,9 +41,9 @@
             // 
             // label1
             // 
-            label1.BackColor = SystemColors.ScrollBar;
-            label1.Font = new Font("Snap ITC", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.HotTrack;
+            label1.BackColor = Color.SteelBlue;
+            label1.Font = new Font("Candara", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label1.ForeColor = SystemColors.ControlText;
             label1.Location = new Point(400, 20);
             label1.Name = "label1";
             label1.Size = new Size(350, 50);
@@ -53,7 +53,7 @@
             // 
             // label4
             // 
-            label4.Font = new Font("Snap ITC", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.Location = new Point(475, 175);
             label4.Name = "label4";
             label4.Size = new Size(200, 30);
@@ -63,7 +63,7 @@
             // 
             // label3
             // 
-            label3.Font = new Font("Snap ITC", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(475, 100);
             label3.Name = "label3";
             label3.Size = new Size(200, 30);
@@ -77,6 +77,7 @@
             tbOutputHeader.Location = new Point(75, 215);
             tbOutputHeader.Name = "tbOutputHeader";
             tbOutputHeader.ReadOnly = true;
+            tbOutputHeader.ScrollBars = ScrollBars.Horizontal;
             tbOutputHeader.Size = new Size(1000, 23);
             tbOutputHeader.TabIndex = 8;
             // 
@@ -85,13 +86,14 @@
             tbInput.BorderStyle = BorderStyle.FixedSingle;
             tbInput.Location = new Point(75, 140);
             tbInput.Name = "tbInput";
+            tbInput.ScrollBars = ScrollBars.Horizontal;
             tbInput.Size = new Size(1000, 23);
             tbInput.TabIndex = 7;
             tbInput.TextChanged += tbInput_TextChanged;
             // 
             // label2
             // 
-            label2.Font = new Font("Snap ITC", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.Location = new Point(475, 250);
             label2.Name = "label2";
             label2.Size = new Size(200, 30);
@@ -101,7 +103,7 @@
             // 
             // label5
             // 
-            label5.Font = new Font("Snap ITC", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label5.Location = new Point(475, 325);
             label5.Name = "label5";
             label5.Size = new Size(200, 30);
@@ -115,6 +117,7 @@
             tbOutputPayload.Location = new Point(75, 290);
             tbOutputPayload.Name = "tbOutputPayload";
             tbOutputPayload.ReadOnly = true;
+            tbOutputPayload.ScrollBars = ScrollBars.Horizontal;
             tbOutputPayload.Size = new Size(1000, 23);
             tbOutputPayload.TabIndex = 13;
             // 
@@ -124,6 +127,7 @@
             tbOutputSignature.Location = new Point(75, 365);
             tbOutputSignature.Name = "tbOutputSignature";
             tbOutputSignature.ReadOnly = true;
+            tbOutputSignature.ScrollBars = ScrollBars.Horizontal;
             tbOutputSignature.Size = new Size(1000, 23);
             tbOutputSignature.TabIndex = 14;
             // 
@@ -131,7 +135,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ScrollBar;
+            BackColor = Color.SteelBlue;
             Controls.Add(tbOutputSignature);
             Controls.Add(tbOutputPayload);
             Controls.Add(label5);

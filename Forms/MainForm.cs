@@ -10,7 +10,7 @@ using UniverzalHelper.UserControls;
 
 namespace UniverzalHelper.Forms
 {
-    public partial class MainForm : Form
+    public partial class MainForm : BaseForm
     {
         private readonly IServiceProvider _serviceProvider;
         public MainForm(IServiceProvider serviceProvider)

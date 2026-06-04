@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             panelUserControl = new Panel();
-            label1 = new Label();
             btnBase64 = new Button();
             btnBase64Gzip = new Button();
             btnHashGenerator = new Button();
@@ -39,29 +38,18 @@
             // 
             // panelUserControl
             // 
-            panelUserControl.Location = new Point(22, 199);
+            panelUserControl.Location = new Point(25, 199);
             panelUserControl.MaximumSize = new Size(1150, 600);
             panelUserControl.MinimumSize = new Size(1150, 600);
             panelUserControl.Name = "panelUserControl";
             panelUserControl.Size = new Size(1150, 600);
             panelUserControl.TabIndex = 0;
             // 
-            // label1
-            // 
-            label1.Font = new Font("Snap ITC", 21.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.HotTrack;
-            label1.Location = new Point(22, 9);
-            label1.Name = "label1";
-            label1.Size = new Size(1150, 55);
-            label1.TabIndex = 1;
-            label1.Text = "Universal Helper";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // btnBase64
             // 
             btnBase64.BackColor = SystemColors.ActiveCaption;
-            btnBase64.Font = new Font("Snap ITC", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnBase64.Location = new Point(22, 87);
+            btnBase64.Font = new Font("Candara", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnBase64.Location = new Point(25, 93);
             btnBase64.Name = "btnBase64";
             btnBase64.Size = new Size(152, 63);
             btnBase64.TabIndex = 2;
@@ -72,8 +60,8 @@
             // btnBase64Gzip
             // 
             btnBase64Gzip.BackColor = SystemColors.ActiveCaption;
-            btnBase64Gzip.Font = new Font("Snap ITC", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnBase64Gzip.Location = new Point(180, 87);
+            btnBase64Gzip.Font = new Font("Candara", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnBase64Gzip.Location = new Point(180, 93);
             btnBase64Gzip.Name = "btnBase64Gzip";
             btnBase64Gzip.Size = new Size(152, 63);
             btnBase64Gzip.TabIndex = 3;
@@ -84,8 +72,8 @@
             // btnHashGenerator
             // 
             btnHashGenerator.BackColor = SystemColors.ActiveCaption;
-            btnHashGenerator.Font = new Font("Snap ITC", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnHashGenerator.Location = new Point(338, 87);
+            btnHashGenerator.Font = new Font("Candara", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnHashGenerator.Location = new Point(338, 93);
             btnHashGenerator.Name = "btnHashGenerator";
             btnHashGenerator.Size = new Size(189, 63);
             btnHashGenerator.TabIndex = 4;
@@ -96,8 +84,8 @@
             // btnJwtToken
             // 
             btnJwtToken.BackColor = SystemColors.ActiveCaption;
-            btnJwtToken.Font = new Font("Snap ITC", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            btnJwtToken.Location = new Point(533, 87);
+            btnJwtToken.Font = new Font("Candara", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnJwtToken.Location = new Point(533, 93);
             btnJwtToken.Name = "btnJwtToken";
             btnJwtToken.Size = new Size(189, 63);
             btnJwtToken.TabIndex = 5;
@@ -109,13 +97,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ScrollBar;
-            ClientSize = new Size(1184, 811);
+            BackColor = Color.SteelBlue;
+            ClientSize = new Size(1200, 850);
             Controls.Add(btnJwtToken);
             Controls.Add(btnHashGenerator);
             Controls.Add(btnBase64Gzip);
             Controls.Add(btnBase64);
-            Controls.Add(label1);
             Controls.Add(panelUserControl);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximumSize = new Size(1200, 850);
@@ -123,13 +110,17 @@
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "UH";
+            Controls.SetChildIndex(panelUserControl, 0);
+            Controls.SetChildIndex(btnBase64, 0);
+            Controls.SetChildIndex(btnBase64Gzip, 0);
+            Controls.SetChildIndex(btnHashGenerator, 0);
+            Controls.SetChildIndex(btnJwtToken, 0);
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panelUserControl;
-        private Label label1;
         private Button btnBase64;
         private Button btnBase64Gzip;
         private Button btnHashGenerator;
