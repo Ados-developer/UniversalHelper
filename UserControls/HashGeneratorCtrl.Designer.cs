@@ -28,38 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label4 = new Label();
-            label3 = new Label();
             tbOutput = new TextBox();
             tbInput = new TextBox();
             label1 = new Label();
             btnCopy = new Button();
             SuspendLayout();
             // 
-            // label4
-            // 
-            label4.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(600, 85);
-            label4.Name = "label4";
-            label4.Size = new Size(500, 40);
-            label4.TabIndex = 10;
-            label4.Text = "Output";
-            label4.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // label3
-            // 
-            label3.Font = new Font("Candara", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(50, 85);
-            label3.Name = "label3";
-            label3.Size = new Size(500, 40);
-            label3.TabIndex = 9;
-            label3.Text = "Input";
-            label3.TextAlign = ContentAlignment.MiddleCenter;
-            // 
             // tbOutput
             // 
+            tbOutput.BackColor = Color.FromArgb(64, 64, 64);
             tbOutput.BorderStyle = BorderStyle.FixedSingle;
             tbOutput.Font = new Font("Candara", 9F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            tbOutput.ForeColor = SystemColors.Info;
             tbOutput.Location = new Point(600, 150);
             tbOutput.Multiline = true;
             tbOutput.Name = "tbOutput";
@@ -70,8 +50,10 @@
             // 
             // tbInput
             // 
+            tbInput.BackColor = Color.FromArgb(64, 64, 64);
             tbInput.BorderStyle = BorderStyle.FixedSingle;
             tbInput.Font = new Font("Candara", 9F, FontStyle.Bold, GraphicsUnit.Point, 238);
+            tbInput.ForeColor = SystemColors.Info;
             tbInput.Location = new Point(50, 150);
             tbInput.Multiline = true;
             tbInput.Name = "tbInput";
@@ -82,10 +64,10 @@
             // 
             // label1
             // 
-            label1.BackColor = Color.SteelBlue;
+            label1.BackColor = Color.Black;
             label1.Font = new Font("Candara", 15.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.ForeColor = SystemColors.ControlText;
-            label1.Location = new Point(400, 20);
+            label1.ForeColor = SystemColors.Info;
+            label1.Location = new Point(410, 56);
             label1.Name = "label1";
             label1.Size = new Size(350, 50);
             label1.TabIndex = 6;
@@ -94,8 +76,13 @@
             // 
             // btnCopy
             // 
-            btnCopy.BackColor = SystemColors.ActiveCaption;
-            btnCopy.Font = new Font("Candara", 11.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnCopy.BackColor = Color.FromArgb(64, 64, 64);
+            btnCopy.FlatAppearance.BorderSize = 0;
+            btnCopy.FlatAppearance.MouseDownBackColor = Color.Gray;
+            btnCopy.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnCopy.FlatStyle = FlatStyle.Flat;
+            btnCopy.Font = new Font("Candara", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnCopy.ForeColor = SystemColors.Info;
             btnCopy.Location = new Point(475, 525);
             btnCopy.Name = "btnCopy";
             btnCopy.Size = new Size(200, 40);
@@ -108,10 +95,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.SteelBlue;
+            BackColor = Color.Black;
             Controls.Add(btnCopy);
-            Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(tbOutput);
             Controls.Add(tbInput);
             Controls.Add(label1);
@@ -124,9 +109,6 @@
         }
 
         #endregion
-
-        private Label label4;
-        private Label label3;
         private TextBox tbOutput;
         private TextBox tbInput;
         private Label label1;

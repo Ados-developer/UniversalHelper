@@ -23,7 +23,7 @@ namespace UniverzalHelper.Forms
             base.OnShown(e);
             Base64DecoderCtrl base64DecoderCtrl = _serviceProvider.GetRequiredService<Base64DecoderCtrl>();
             ShowUserControl(base64DecoderCtrl);
-            btnBase64.BackColor = SystemColors.HotTrack;
+            btnBase64.BackColor = Color.Gray;
         }
         private void ShowUserControl(UserControl control)
         {
@@ -34,40 +34,40 @@ namespace UniverzalHelper.Forms
 
         private void btnBase64_Click(object sender, EventArgs e)
         {
-            btnBase64.BackColor = SystemColors.HotTrack;
-            btnBase64Gzip.BackColor = SystemColors.ActiveCaption;
-            btnHashGenerator.BackColor = SystemColors.ActiveCaption;
-            btnJwtToken.BackColor = SystemColors.ActiveCaption;
+            btnBase64.BackColor = Color.Gray;
+            btnBase64Gzip.BackColor = Color.FromArgb(64, 64, 64);
+            btnHashGenerator.BackColor = Color.FromArgb(64, 64, 64);
+            btnJwtToken.BackColor = Color.FromArgb(64, 64, 64);
             Base64DecoderCtrl control = _serviceProvider.GetRequiredService<Base64DecoderCtrl>();
             ShowUserControl(control);
         }
 
         private void btnBase64Gzip_Click(object sender, EventArgs e)
         {
-            btnBase64.BackColor = SystemColors.ActiveCaption;
-            btnBase64Gzip.BackColor = SystemColors.HotTrack;
-            btnHashGenerator.BackColor = SystemColors.ActiveCaption;
-            btnJwtToken.BackColor = SystemColors.ActiveCaption;
+            btnBase64.BackColor = Color.FromArgb(64, 64, 64);
+            btnBase64Gzip.BackColor = Color.Gray;
+            btnHashGenerator.BackColor = Color.FromArgb(64, 64, 64);
+            btnJwtToken.BackColor = Color.FromArgb(64, 64, 64);
             Base64GzipDecoderCtrl control = _serviceProvider.GetRequiredService<Base64GzipDecoderCtrl>();
             ShowUserControl(control);
         }
 
         private void btnHashGenerator_Click(object sender, EventArgs e)
         {
-            btnBase64.BackColor = SystemColors.ActiveCaption;
-            btnBase64Gzip.BackColor = SystemColors.ActiveCaption;
-            btnHashGenerator.BackColor = SystemColors.HotTrack;
-            btnJwtToken.BackColor = SystemColors.ActiveCaption;
+            btnBase64.BackColor = Color.FromArgb(64, 64, 64);
+            btnBase64Gzip.BackColor = Color.FromArgb(64, 64, 64);
+            btnHashGenerator.BackColor = Color.Gray;
+            btnJwtToken.BackColor = Color.FromArgb(64, 64, 64);
             HashGeneratorCtrl control = _serviceProvider.GetRequiredService<HashGeneratorCtrl>();
             ShowUserControl(control);
         }
 
         private void btnJwtToken_Click(object sender, EventArgs e)
         {
-            btnBase64.BackColor = SystemColors.ActiveCaption;
-            btnBase64Gzip.BackColor = SystemColors.ActiveCaption;
-            btnHashGenerator.BackColor = SystemColors.ActiveCaption;
-            btnJwtToken.BackColor = SystemColors.HotTrack;
+            btnBase64.BackColor = Color.FromArgb(64, 64, 64);
+            btnBase64Gzip.BackColor = Color.FromArgb(64, 64, 64);
+            btnHashGenerator.BackColor = Color.FromArgb(64, 64, 64);
+            btnJwtToken.BackColor = Color.Gray;
             JwtTokenDecoderCtrl control = _serviceProvider.GetRequiredService<JwtTokenDecoderCtrl>();
             ShowUserControl(control);
         }

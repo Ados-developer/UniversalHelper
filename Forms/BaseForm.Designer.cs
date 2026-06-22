@@ -38,7 +38,7 @@
             // 
             // panelTitleBar
             // 
-            panelTitleBar.BackColor = Color.FromArgb(0, 0, 192);
+            panelTitleBar.BackColor = Color.FromArgb(64, 64, 64);
             panelTitleBar.Controls.Add(btnClose);
             panelTitleBar.Controls.Add(btnMaximize);
             panelTitleBar.Controls.Add(btnMinimize);
@@ -52,16 +52,16 @@
             // btnClose
             // 
             btnClose.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnClose.BackColor = Color.FromArgb(0, 0, 192);
+            btnClose.BackColor = Color.FromArgb(64, 64, 64);
             btnClose.FlatAppearance.BorderSize = 0;
-            btnClose.FlatAppearance.MouseDownBackColor = Color.FromArgb(44, 62, 80);
-            btnClose.FlatAppearance.MouseOverBackColor = Color.FromArgb(44, 62, 80);
+            btnClose.FlatAppearance.MouseDownBackColor = Color.Gray;
+            btnClose.FlatAppearance.MouseOverBackColor = Color.Gray;
             btnClose.FlatStyle = FlatStyle.Flat;
             btnClose.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            btnClose.ForeColor = SystemColors.ActiveCaption;
-            btnClose.Location = new Point(1161, 9);
+            btnClose.ForeColor = Color.White;
+            btnClose.Location = new Point(1152, 0);
             btnClose.Name = "btnClose";
-            btnClose.Size = new Size(27, 28);
+            btnClose.Size = new Size(48, 50);
             btnClose.TabIndex = 3;
             btnClose.Text = "X";
             btnClose.UseVisualStyleBackColor = false;
@@ -69,16 +69,16 @@
             // btnMaximize
             // 
             btnMaximize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMaximize.BackColor = Color.FromArgb(0, 0, 192);
+            btnMaximize.BackColor = Color.FromArgb(64, 64, 64);
             btnMaximize.FlatAppearance.BorderSize = 0;
-            btnMaximize.FlatAppearance.MouseDownBackColor = Color.FromArgb(44, 62, 80);
-            btnMaximize.FlatAppearance.MouseOverBackColor = Color.FromArgb(44, 62, 80);
+            btnMaximize.FlatAppearance.MouseDownBackColor = Color.Gray;
+            btnMaximize.FlatAppearance.MouseOverBackColor = Color.Gray;
             btnMaximize.FlatStyle = FlatStyle.Flat;
             btnMaximize.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            btnMaximize.ForeColor = SystemColors.ActiveCaption;
-            btnMaximize.Location = new Point(1128, 9);
+            btnMaximize.ForeColor = Color.White;
+            btnMaximize.Location = new Point(1097, 0);
             btnMaximize.Name = "btnMaximize";
-            btnMaximize.Size = new Size(27, 28);
+            btnMaximize.Size = new Size(49, 50);
             btnMaximize.TabIndex = 2;
             btnMaximize.Text = "🗖";
             btnMaximize.UseVisualStyleBackColor = false;
@@ -86,16 +86,16 @@
             // btnMinimize
             // 
             btnMinimize.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnMinimize.BackColor = Color.FromArgb(0, 0, 192);
+            btnMinimize.BackColor = Color.FromArgb(64, 64, 64);
             btnMinimize.FlatAppearance.BorderSize = 0;
-            btnMinimize.FlatAppearance.MouseDownBackColor = Color.FromArgb(44, 62, 80);
-            btnMinimize.FlatAppearance.MouseOverBackColor = Color.FromArgb(44, 62, 80);
+            btnMinimize.FlatAppearance.MouseDownBackColor = Color.Gray;
+            btnMinimize.FlatAppearance.MouseOverBackColor = Color.Gray;
             btnMinimize.FlatStyle = FlatStyle.Flat;
             btnMinimize.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-            btnMinimize.ForeColor = SystemColors.ActiveCaption;
-            btnMinimize.Location = new Point(1095, 9);
+            btnMinimize.ForeColor = Color.White;
+            btnMinimize.Location = new Point(1042, 0);
             btnMinimize.Name = "btnMinimize";
-            btnMinimize.Size = new Size(27, 28);
+            btnMinimize.Size = new Size(49, 50);
             btnMinimize.TabIndex = 1;
             btnMinimize.Text = "🗕";
             btnMinimize.UseVisualStyleBackColor = false;
@@ -104,7 +104,7 @@
             // 
             lblTitle.AutoSize = true;
             lblTitle.Font = new Font("Snap ITC", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            lblTitle.ForeColor = SystemColors.ActiveCaption;
+            lblTitle.ForeColor = Color.White;
             lblTitle.Location = new Point(13, 9);
             lblTitle.Name = "lblTitle";
             lblTitle.Size = new Size(261, 31);
