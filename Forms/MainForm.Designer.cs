@@ -34,6 +34,7 @@
             btnBase64Gzip = new Button();
             btnHashGenerator = new Button();
             btnJwtToken = new Button();
+            btnColor = new Button();
             SuspendLayout();
             // 
             // panelUserControl
@@ -113,12 +114,30 @@
             btnJwtToken.UseVisualStyleBackColor = false;
             btnJwtToken.Click += btnJwtToken_Click;
             // 
+            // btnColor
+            // 
+            btnColor.BackColor = Color.FromArgb(64, 64, 64);
+            btnColor.FlatAppearance.BorderSize = 0;
+            btnColor.FlatAppearance.MouseDownBackColor = Color.Gray;
+            btnColor.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnColor.FlatStyle = FlatStyle.Flat;
+            btnColor.Font = new Font("Candara", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnColor.ForeColor = SystemColors.Info;
+            btnColor.Location = new Point(731, 93);
+            btnColor.Name = "btnColor";
+            btnColor.Size = new Size(189, 63);
+            btnColor.TabIndex = 6;
+            btnColor.Text = "Color Converter";
+            btnColor.UseVisualStyleBackColor = false;
+            btnColor.Click += btnColor_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(1200, 850);
+            Controls.Add(btnColor);
             Controls.Add(btnJwtToken);
             Controls.Add(btnHashGenerator);
             Controls.Add(btnBase64Gzip);
@@ -135,6 +154,7 @@
             Controls.SetChildIndex(btnBase64Gzip, 0);
             Controls.SetChildIndex(btnHashGenerator, 0);
             Controls.SetChildIndex(btnJwtToken, 0);
+            Controls.SetChildIndex(btnColor, 0);
             ResumeLayout(false);
         }
 
@@ -145,5 +165,6 @@
         private Button btnBase64Gzip;
         private Button btnHashGenerator;
         private Button btnJwtToken;
+        private Button btnColor;
     }
 }

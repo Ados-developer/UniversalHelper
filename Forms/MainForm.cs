@@ -38,6 +38,7 @@ namespace UniverzalHelper.Forms
             btnBase64Gzip.BackColor = Color.FromArgb(64, 64, 64);
             btnHashGenerator.BackColor = Color.FromArgb(64, 64, 64);
             btnJwtToken.BackColor = Color.FromArgb(64, 64, 64);
+            btnColor.BackColor = Color.FromArgb(64, 64, 64);
             Base64DecoderCtrl control = _serviceProvider.GetRequiredService<Base64DecoderCtrl>();
             ShowUserControl(control);
         }
@@ -48,6 +49,7 @@ namespace UniverzalHelper.Forms
             btnBase64Gzip.BackColor = Color.Gray;
             btnHashGenerator.BackColor = Color.FromArgb(64, 64, 64);
             btnJwtToken.BackColor = Color.FromArgb(64, 64, 64);
+            btnColor.BackColor = Color.FromArgb(64, 64, 64);
             Base64GzipDecoderCtrl control = _serviceProvider.GetRequiredService<Base64GzipDecoderCtrl>();
             ShowUserControl(control);
         }
@@ -58,6 +60,7 @@ namespace UniverzalHelper.Forms
             btnBase64Gzip.BackColor = Color.FromArgb(64, 64, 64);
             btnHashGenerator.BackColor = Color.Gray;
             btnJwtToken.BackColor = Color.FromArgb(64, 64, 64);
+            btnColor.BackColor = Color.FromArgb(64, 64, 64);
             HashGeneratorCtrl control = _serviceProvider.GetRequiredService<HashGeneratorCtrl>();
             ShowUserControl(control);
         }
@@ -68,7 +71,18 @@ namespace UniverzalHelper.Forms
             btnBase64Gzip.BackColor = Color.FromArgb(64, 64, 64);
             btnHashGenerator.BackColor = Color.FromArgb(64, 64, 64);
             btnJwtToken.BackColor = Color.Gray;
+            btnColor.BackColor = Color.FromArgb(64, 64, 64);
             JwtTokenDecoderCtrl control = _serviceProvider.GetRequiredService<JwtTokenDecoderCtrl>();
+            ShowUserControl(control);
+        }
+        private void btnColor_Click(object sender, EventArgs e)
+        {
+            btnBase64.BackColor = Color.FromArgb(64, 64, 64);
+            btnBase64Gzip.BackColor = Color.FromArgb(64, 64, 64);
+            btnHashGenerator.BackColor = Color.FromArgb(64, 64, 64);
+            btnJwtToken.BackColor = Color.FromArgb(64, 64, 64);
+            btnColor.BackColor = Color.Gray;
+            ColorCtrl control = _serviceProvider.GetRequiredService<ColorCtrl>();
             ShowUserControl(control);
         }
     }

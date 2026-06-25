@@ -28,6 +28,7 @@ namespace UniverzalHelper
                     services.AddTransient<Base64GzipDecoderCtrl>();
                     services.AddTransient<HashGeneratorCtrl>();
                     services.AddTransient<JwtTokenDecoderCtrl>();
+                    services.AddTransient<ColorCtrl>();
                 })
             .Build();
 
