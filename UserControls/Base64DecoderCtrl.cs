@@ -15,6 +15,7 @@ namespace UniverzalHelper.UserControls
         {
             InitializeComponent();
         }
+        private string warning = "Waiting for complet Base64...";
 
         private void tbInput_TextChanged(object sender, EventArgs e)
         {
@@ -27,7 +28,7 @@ namespace UniverzalHelper.UserControls
             }
             catch
             {
-                tbOutput.Text = "Waiting for complet Base64...";
+                tbOutput.Text = warning;
             }
         }
 
@@ -36,24 +37,31 @@ namespace UniverzalHelper.UserControls
             SaveFileDialog dialog = new SaveFileDialog();
             dialog.Filter = "XML file|*.xml|JSON file|*.json|Text file|*.txt|All files|*.*";
             dialog.FileName = "output";
-            if (dialog.ShowDialog() == DialogResult.OK)
+            if (string.IsNullOrEmpty(tbOutput.Text) || tbOutput.Text == warning)
             {
-                File.WriteAllText(dialog.FileName, tbOutput.Text);
-                tbInput.Text = "";
-                MessageBox.Show("The file was successfuly saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Output area is empty. You have to write something.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    File.WriteAllText(dialog.FileName, tbOutput.Text);
+                    tbInput.Text = "";
+                    MessageBox.Show("The file was successfuly saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }     
         }
 
         private void btnCopy_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(tbOutput.Text))
+            if (string.IsNullOrEmpty(tbOutput.Text) || tbOutput.Text == warning)
             {
-                Clipboard.SetText(tbOutput.Text);
-                MessageBox.Show("Output text was copied to clipboard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Output area is empty. You have to write something.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Output area is empty. You have to write something.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Clipboard.SetText(tbOutput.Text);
+                MessageBox.Show("Output text was copied to clipboard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

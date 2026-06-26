@@ -85,5 +85,17 @@ namespace UniverzalHelper.Forms
             ColorCtrl control = _serviceProvider.GetRequiredService<ColorCtrl>();
             ShowUserControl(control);
         }
+
+        private void btnBase16_Click(object sender, EventArgs e)
+        {
+            btnBase64.BackColor = Color.FromArgb(64, 64, 64);
+            btnBase64Gzip.BackColor = Color.FromArgb(64, 64, 64);
+            btnHashGenerator.BackColor = Color.FromArgb(64, 64, 64);
+            btnJwtToken.BackColor = Color.FromArgb(64, 64, 64);
+            btnColor.BackColor = Color.FromArgb(64, 64, 64);
+            btnBase16.BackColor = Color.Gray;
+            Base16DecoderCtrl control = _serviceProvider.GetRequiredService<Base16DecoderCtrl>();
+            ShowUserControl(control);
+        }
     }
 }

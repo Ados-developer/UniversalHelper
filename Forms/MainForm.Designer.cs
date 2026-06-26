@@ -35,6 +35,7 @@
             btnHashGenerator = new Button();
             btnJwtToken = new Button();
             btnColor = new Button();
+            btnBase16 = new Button();
             SuspendLayout();
             // 
             // panelUserControl
@@ -131,12 +132,30 @@
             btnColor.UseVisualStyleBackColor = false;
             btnColor.Click += btnColor_Click;
             // 
+            // btnBase16
+            // 
+            btnBase16.BackColor = Color.FromArgb(64, 64, 64);
+            btnBase16.FlatAppearance.BorderSize = 0;
+            btnBase16.FlatAppearance.MouseDownBackColor = Color.Gray;
+            btnBase16.FlatAppearance.MouseOverBackColor = Color.Gray;
+            btnBase16.FlatStyle = FlatStyle.Flat;
+            btnBase16.Font = new Font("Candara", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            btnBase16.ForeColor = SystemColors.Info;
+            btnBase16.Location = new Point(926, 93);
+            btnBase16.Name = "btnBase16";
+            btnBase16.Size = new Size(189, 63);
+            btnBase16.TabIndex = 7;
+            btnBase16.Text = "Base16";
+            btnBase16.UseVisualStyleBackColor = false;
+            btnBase16.Click += btnBase16_Click;
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
             ClientSize = new Size(1200, 850);
+            Controls.Add(btnBase16);
             Controls.Add(btnColor);
             Controls.Add(btnJwtToken);
             Controls.Add(btnHashGenerator);
@@ -155,6 +174,7 @@
             Controls.SetChildIndex(btnHashGenerator, 0);
             Controls.SetChildIndex(btnJwtToken, 0);
             Controls.SetChildIndex(btnColor, 0);
+            Controls.SetChildIndex(btnBase16, 0);
             ResumeLayout(false);
         }
 
@@ -166,5 +186,6 @@
         private Button btnHashGenerator;
         private Button btnJwtToken;
         private Button btnColor;
+        private Button btnBase16;
     }
 }

@@ -29,6 +29,7 @@ namespace UniverzalHelper
                     services.AddTransient<HashGeneratorCtrl>();
                     services.AddTransient<JwtTokenDecoderCtrl>();
                     services.AddTransient<ColorCtrl>();
+                    services.AddTransient<Base16DecoderCtrl>();
                 })
             .Build();
 

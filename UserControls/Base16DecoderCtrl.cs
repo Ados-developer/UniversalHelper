@@ -3,31 +3,26 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO.Compression;
 using System.Text;
 using System.Windows.Forms;
 
 namespace UniverzalHelper.UserControls
 {
-    public partial class Base64GzipDecoderCtrl : UserControl
+    public partial class Base16DecoderCtrl : UserControl
     {
-        public Base64GzipDecoderCtrl()
+        public Base16DecoderCtrl()
         {
             InitializeComponent();
         }
-        private string warning = "Waiting for complet Base64Gzip...";
-
+        private string warning = "Waiting for complet Base16...";
         private void tbInput_TextChanged(object sender, EventArgs e)
         {
             try
             {
-                byte[] compressed = Convert.FromBase64String(tbInput.Text);
-                using var input = new MemoryStream(compressed);
-                using var gzip = new GZipStream(input, CompressionMode.Decompress);
-                using var output = new MemoryStream();
-                gzip.CopyTo(output);
-
-                string result = Encoding.UTF8.GetString(output.ToArray());
+                string hex = tbInput.Text.Trim();
+                hex = hex.StartsWith("0x", StringComparison.OrdinalIgnoreCase) ? hex[2..] : hex;
+                byte[] Bytes = Convert.FromHexString(hex);
+                string result = Encoding.UTF8.GetString(Bytes);
 
                 tbOutput.Text = result;
             }
@@ -42,7 +37,7 @@ namespace UniverzalHelper.UserControls
             SaveFileDialog dialog = new SaveFileDialog();
             dialog.Filter = "XML file|*.xml|JSON file|*.json|Text file|*.txt|All files|*.*";
             dialog.FileName = "output";
-            if(string.IsNullOrEmpty(tbOutput.Text) || tbOutput.Text == warning)
+            if (string.IsNullOrEmpty(tbOutput.Text) || tbOutput.Text == warning)
             {
                 MessageBox.Show("Output area is empty. You have to write something.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -52,15 +47,15 @@ namespace UniverzalHelper.UserControls
                 {
                     File.WriteAllText(dialog.FileName, tbOutput.Text);
                     tbInput.Text = "";
-                    MessageBox.Show("The file was successfuly saved", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("The file was successfuly saved.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }  
+            }
         }
 
         private void btnCopy_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(tbOutput.Text) || tbOutput.Text == warning)
-            {
+            {               
                 MessageBox.Show("Output area is empty. You have to write something.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
