@@ -12,7 +12,7 @@ namespace UniverzalHelper.UserControls
     {
         public ColorCtrl()
         {
-         
+
             InitializeComponent();
         }
         private void btnPick_Click(object sender, EventArgs e)
@@ -30,10 +30,51 @@ namespace UniverzalHelper.UserControls
                 pnlPreview.BackColor = c;   // náhľad (ak máš panel)
 
                 string hex = $"#{c.R:X2}{c.G:X2}{c.B:X2}";
-                string rgb = $"rgb({c.R}, {c.G}, {c.B})";
-                string rgba = $"rgba({c.R}, {c.G}, {c.B}, 1)";
+                string rgb = $"rgb({c.R},{c.G},{c.B})";
+                string rgba = $"rgba({c.R},{c.G},{c.B},1)";
 
-                tbOutput.Text = $"HEX:  {hex}\r\nRGB:  {rgb}\r\nRGBA: {rgba}";
+                tbHex.Text = $"{hex}";
+                tbRgb.Text = $"{rgb}";
+                tbRgba.Text = $"{rgba}";
+            }
+        }
+
+        private void btnCopyHex_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(tbHex.Text))
+            {
+                MessageBox.Show("The Field HEX is empty. You have to write something.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                Clipboard.SetText(tbHex.Text);
+                MessageBox.Show("The Field HEX was copied to clipboard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnCopyRgb_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(tbRgb.Text))
+            {
+                MessageBox.Show("The Field RGB is empty. You have to write something.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                Clipboard.SetText(tbRgb.Text);
+                MessageBox.Show("The Field RGB was copied to clipboard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
+        private void btnCopyRgba_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(tbRgba.Text))
+            {
+                MessageBox.Show("The Field RGBA is empty. You have to write something.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                Clipboard.SetText(tbRgba.Text);
+                MessageBox.Show("The Field RGBA was copied to clipboard.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
